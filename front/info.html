@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ACE-RandomClick | Information</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f7f7f8;
+            color: #222;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        .header {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .header h1 {
+            margin: 0 0 8px;
+            font-size: 32px;
+        }
+
+        .header p {
+            margin: 0;
+            color: #ccc;
+            font-size: 15px;
+        }
+
+        .nav {
+            background: white;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav a {
+            color: #444;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav a:hover {
+            color: #4f46e5;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 850px;
+            margin: 35px auto;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 25px;
+            padding: 30px;
+            border-radius: 14px;
+            border: 1px solid #e5e5e5;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .section h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #111;
+            font-size: 24px;
+        }
+
+        .section h3 {
+            margin-top: 25px;
+            color: #222;
+            font-size: 18px;
+        }
+
+        .section p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .section ul {
+            color: #555;
+            padding-left: 22px;
+        }
+
+        .company {
+            text-align: center;
+        }
+
+        .company img {
+            width: 180px;
+            max-width: 70%;
+            height: auto;
+            display: block;
+            margin: 10px auto 20px;
+        }
+
+        .contact-box {
+            background: #f5f5ff;
+            border: 1px solid #e2e2ff;
+            border-radius: 10px;
+            padding: 18px;
+        }
+
+        .contact-box a {
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 13px;
+        }
+
+        .footer a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                padding: 35px 15px;
+            }
+
+            .header h1 {
+                font-size: 26px;
+            }
+
+            .section {
+                padding: 22px 18px;
+            }
+
+            .section h2 {
+                font-size: 21px;
+            }
+
+            .nav {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>ACE-RandomClick</h1>
+        <p>A fun image-sharing platform for students</p>
+    </header>
+
+
+    <nav class="nav">
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms & Conditions</a>
+    </nav>
+
+
+    <main class="container">
+
+        <section class="section" id="about">
+            <h2>About Us</h2>
+
+            <p>
+                Welcome to ACE-RandomClick, a fun and simple image-sharing
+                platform created for students of ACE College.
+            </p>
+
+            <p>
+                ACE-RandomClick was created as a college fun project where
+                students can share images and interact with posts through
+                likes and comments.
+            </p>
+
+            <p>
+                The platform is designed to provide students with a simple
+                place to share moments, participate in conversations, and
+                enjoy a casual community experience.
+            </p>
+
+            <h3>What You Can Do</h3>
+
+            <ul>
+                <li>Upload images to the platform.</li>
+                <li>Like images shared by other users.</li>
+                <li>Comment on uploaded images.</li>
+                <li>Report content that may violate our rules.</li>
+                <li>Request removal of an image when appropriate.</li>
+            </ul>
+
+            <h3>Our Company</h3>
+
+            <div class="company">
+                <img src="image copy 3.png" alt="Cevora">
+                <p>
+                    ACE-RandomClick is a fun project associated with Cevora.
+                </p>
+            </div>
+        </section>
+
+
+        <section class="section" id="contact">
+            <h2>Contact Us</h2>
+
+            <p>
+                If you have a question, notice a problem, want to report
+                content, or need to contact us regarding the website,
+                you can reach us using the contact information below.
+            </p>
+
+            <div class="contact-box">
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:mnmasterrajput@gmail.com">
+                        mnmasterrajput@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Instagram:</strong>
+                    <a href="https://www.instagram.com/cevora.555?stkn=dzF2c20wOTQyeDgw" target="_blank" rel="noopener noreferrer">
+                        Visit our Instagram
+                    </a>
+                </p>
+            </div>
+        </section>
+
+
+        <section class="section" id="privacy">
+            <h2>Privacy Policy</h2>
+
+            <p>
+                Your privacy is important to us. ACE-RandomClick is designed
+                as a simple student-focused platform and does not require
+                users to create an account or log in.
+            </p>
+
+            <h3>Information We Collect</h3>
+
+            <p>
+                ACE-RandomClick does not intentionally collect personal
+                information such as passwords, phone numbers, home addresses,
+                or other unnecessary personal information from users.
+            </p>
+
+            <h3>Comments</h3>
+
+            <p>
+                Comments submitted on the platform are stored in our database
+                so that they can be displayed with the relevant image.
+            </p>
+
+            <h3>Uploaded Images</h3>
+
+            <p>
+                Images uploaded by users are stored using Cloudinary.
+                Uploaded content may be displayed publicly on the website.
+            </p>
+
+            <h3>Content Removal</h3>
+
+            <p>
+                Users can report content that they believe violates our
+                rules. Reported or inappropriate content may be reviewed
+                and removed when necessary.
+            </p>
+
+            <h3>Advertising</h3>
+
+            <p>
+                We may introduce advertising services such as Google AdSense
+                in the future. If advertising or third-party services are
+                introduced, this privacy policy may be updated to explain
+                their use of cookies, advertising technologies, and related
+                data practices.
+            </p>
+
+            <h3>Policy Updates</h3>
+
+            <p>
+                This Privacy Policy may be updated from time to time to
+                reflect changes to the website, its features, or applicable
+                requirements.
+            </p>
+        </section>
+
+
+        <section class="section" id="terms">
+            <h2>Terms & Conditions</h2>
+
+            <p>
+                By using ACE-RandomClick, you agree to use the website
+                responsibly and follow the rules described below.
+            </p>
+
+            <h3>Acceptable Use</h3>
+
+            <p>
+                Users may upload images and interact with content on the
+                platform for lawful and appropriate purposes.
+            </p>
+
+            <h3>Prohibited Content</h3>
+
+            <p>
+                Users must not upload, share, or promote content that is
+                illegal, sexually explicit, pornographic, abusive, hateful,
+                threatening, violent, or otherwise inappropriate for a
+                student-oriented platform.
+            </p>
+
+            <p>
+                Content that violates applicable laws or the rights of other
+                people is also prohibited.
+            </p>
+
+            <h3>Copyright and Ownership</h3>
+
+            <p>
+                Users should only upload content that they have the right
+                to share. Users should not upload copyrighted material,
+                private material, or someone else's content without the
+                necessary permission.
+            </p>
+
+            <h3>Content Removal</h3>
+
+            <p>
+                Users can report content that they believe violates these
+                Terms & Conditions. We reserve the right to review and
+                remove content that violates our rules or applicable
+                requirements.
+            </p>
+
+            <h3>Image Deletion</h3>
+
+            <p>
+                The website provides a password-protected mechanism for
+                authorized image removal. The password may change after
+                an image is removed.
+            </p>
+
+            <h3>Responsible Use</h3>
+
+            <p>
+                Users are responsible for the content they upload and the
+                comments they submit. ACE-RandomClick should not be used
+                to harass, threaten, impersonate, or harm another person.
+            </p>
+
+            <h3>Changes to These Terms</h3>
+
+            <p>
+                These Terms & Conditions may be updated when necessary.
+                Continued use of the website after an update may constitute
+                acceptance of the updated terms.
+            </p>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <p>
+            © 2026 ACE-RandomClick. All rights reserved.
+        </p>
+
+        <p>
+            <a href="#about">About Us</a> ·
+            <a href="#contact">Contact Us</a> ·
+            <a href="#privacy">Privacy Policy</a> ·
+            <a href="#terms">Terms & Conditions</a>
+        </p>
+    </footer>
+
+</body>
+</html>

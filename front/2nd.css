@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0d233a 0%, #004b8d 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+/* 1. Logo Styling */
+/* 1. Logo Box Container */
+.logo-box {
+    width: 100px;           /* Standard Fixed Width */
+    height: 100px;          /* Same Height for Perfect Circle */
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;       /* Circle se bahar nikalne wale parts ko cut kar dega */
+    padding: 10px;          /* Logo ko thodi saans lene ki jagah dega */
+}
+
+/* 2. Logo Image */
+.logo-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;    /* Image ka ratio kharab kiye bina box ke andar fit karega */
+}
+
+/* 2. Welcome Section */
+.welcome-text {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.brand-name {
+    color: #00a8e8;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: #cfd8dc;
+    letter-spacing: 2px;
+    margin-top: -10px;
+    text-transform: uppercase;
+}
+
+/* 3. Pass Card Styling */
+.pass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pass-label {
+    display: block;
+    font-size: 12px;
+    color: #b0bec5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.pass-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 4px;
+}
+
+/* 4. Action Button with Heavy Shadow/Glow */
+.action-btn {
+    width: 100%;
+    padding: 15px;
+    background: #00a8e8;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    /* Special Box Shadow / Glow Effect */
+    box-shadow: 0 10px 25px rgba(0, 168, 232, 0.5);
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0, 168, 232, 0.7);
+    background: #0096d1;
+}
+
+/* 5. Instagram Button */
+.insta-btn {
+    width: 100%;
+    padding: 13px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #00a8e8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.insta-btn:hover {
+    background: rgba(0, 168, 232, 0.15);
+}
+
+/* 6. About Section */
+.about-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.about-card h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #00a8e8;
+}
+
+.about-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #eceff1;
+}
+/* Feedback Card Container */
+.feedback-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.feedback-card h2 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: #00a8e8;
+}
+
+.feedback-card p {
+    font-size: 12px;
+    color: #b0bec5;
+    margin-bottom: 12px;
+}
+
+/* Inputs & Textarea */
+.feedback-input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 13px;
+    outline: none;
+    resize: none;
+}
+
+.feedback-input::placeholder {
+    color: #90a4ae;
+}
+
+.feedback-input:focus {
+    border-color: #00a8e8;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Submit Button */
+.feedback-btn {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    color: #00a8e8;
+    border: 1px solid #00a8e8;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feedback-btn:hover {
+    background: #00a8e8;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 168, 232, 0.3);
+}

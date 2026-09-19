@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cevora - Passkey & Info</title>
+    <link rel="stylesheet" href="2nd.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. Website Logo Section -->
+        <div class="logo-box">
+            <img src="image copy 3.png" alt="Cevora Logo" class="logo-img">
+        </div>
+
+        <!-- 2. User Welcome Section -->
+        <h1 class="welcome-text">Welcome to <span class="brand-name">Cevora</span></h1>
+        <p class="subtitle">Innovate • Inspire • Grow</p>
+
+        <!-- 3. Current Pass Display Section -->
+        <div class="pass-card">
+            <span class="pass-label">Current Delete Passkey</span>
+            <div class="pass-value" id="currentPass">Loading...</div>
+        </div>
+
+        <!-- 4. Main Site Link Button (Shadow/Glow Effect) -->
+        <a href="index.html" class="action-btn">
+            Go to Main Website
+        </a>
+
+        <!-- 5. Instagram Profile Button -->
+        <a href="https://www.instagram.com/cevora.555?stkn=dzF2c20wOTQyeDgw" target="_blank" class="insta-btn">
+            Follow on Instagram
+        </a>
+
+        <!-- 6. About Company Section -->
+        <div class="about-card">
+            <h2>About Cevora</h2>
+            <p>
+                At Cevora, we embody innovation, inspire change, and foster sustainable growth. 
+                We are building a global community for visionaries to connect, share, and scale new ideas together.
+            </p>
+        </div>
+        <!-- Report & Feedback Section -->
+<div class="feedback-card">
+    <h2>Report Issue or Feedback</h2>
+    <p>Facing an issue with the passkey or image gallery? Let us know.</p>
+    
+    <form id="feedbackForm">
+        <input type="text" placeholder="Your Name" id="2" required class="feedback-input">
+        <textarea placeholder="Type your issue or feedback..." rows="3" id="1" required class="feedback-input"></textarea>
+        <button type="submit" class="feedback-btn" onclick="msg()" >Send Report</button>
+    </form>
+</div>
+    </div>
+
+    <script src="2nd.js"></script>
+</body>
+</html>

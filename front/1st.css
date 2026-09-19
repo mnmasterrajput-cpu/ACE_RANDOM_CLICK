@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.top {
+    width: 100%;
+    height: 50vh;
+}
+
+/* MAIN IMAGE AREA */
+.mid {
+    width: 95%;
+    max-width: 700px;
+    margin: 0 auto;
+    height: auto;
+}
+
+/* SINGLE POST */
+.post {
+    width: 100%;
+    margin: 20px 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+}
+
+.buttons button {
+    border: none;
+    background-color: transparent;
+    padding: 8px 12px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.buttons button:hover {
+    background-color: #f2f2f2;
+}
+
+/* DELETE */
+.buttons button:last-child {
+    color: red;
+    margin-left: auto;
+}
+
+.buttons button:last-child:hover {
+    background-color: #ffe5e5;
+}
+
+/* LAST SECTION */
+.lst {
+    width: 100%;
+    min-height: 150px;
+    background-color: #111;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    
+    flex-wrap: wrap;
+    padding: 30px 15px;
+    box-sizing: border-box;
+}
+
+.lst a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.lst a:hover {
+    color: #aaa;
+    text-decoration: underline;
+}
+
+.inp {
+    width: 95%;
+    max-width: 700px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.inp button,
+.inp input {
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.pimg {
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#pass {
+    flex: 1;
+    min-width: 0;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+#pass:focus {
+    border-color: #888;
+}
+
+.ent {
+    padding: 0 18px;
+    border: none;
+    background-color: #111;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ent:hover {
+    background-color: #333;
+}
+/* Popup background/card */
+.popup {
+    display: none;
+    width: 450px;
+    max-width: 92%;
+    height: 550px;
+    max-height: 90vh;
+
+    background: #fff;
+    border-radius: 18px;
+    padding: 20px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+
+    display: none;
+    z-index: 1000;
+
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+    /* important */
+    overflow: hidden;
+}
+
+
+/* Comments */
+.allc {
+    height: 300px;
+    max-height: calc(100% - 180px);
+
+    overflow-y: auto;
+
+    padding: 5px 10px 5px 5px;
+    margin-bottom: 15px;
+
+    background: #f7f7f8;
+    border-radius: 12px;
+
+    box-sizing: border-box;
+}
+
+
+/* Comment */
+.doc {
+    background: white;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+
+    color: #333;
+    font-size: 14px;
+
+    word-break: break-word;
+}
+
+.doc:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Inputs */
+.nam,
+.com {
+    width: 100%;
+    box-sizing: border-box;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    padding: 11px 13px;
+
+    outline: none;
+    font-size: 14px;
+
+    margin-bottom: 9px;
+}
+
+.nam:focus,
+.com:focus {
+    border-color: #6366f1;
+}
+
+
+/* Comment box */
+.com {
+    height: 55px;
+    resize: none;
+}
+
+
+/* Buttons */
+.popup button {
+    padding: 10px 17px;
+
+    border: none;
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Comment */
+.popup button:first-of-type {
+    background: #6366f1;
+    color: white;
+}
+
+.popup button:first-of-type:hover {
+    background: #4f46e5;
+}
+
+
+/* Cancel */
+.popup button:last-of-type {
+    background: #eee;
+    color: #333;
+}
+
+.popup button:last-of-type:hover {
+    background: #ddd;
+}
+.lodemore {
+    display: block;       /* Button ko block element banane ke liye (Zaroori hai) */
+    width: 30%;
+    margin: 20px auto;    /* Top-Bottom 20px space, Left-Right Center (auto) */
+    background-color: blue;
+    color: white;         /* Text visible karne ke liye */
+    padding: 10px 0;      /* Height % ki jagah padding se button clean dikhega */
+    border: none;
+    cursor: pointer;
+}

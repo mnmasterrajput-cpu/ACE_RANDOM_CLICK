@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACE-RandomClick</title>
+    <link rel="stylesheet" href="1st.css">
+</head>
+<body>
+   <div class="popup" id="popup">
+    <div class="allc">
+        <div class="doc">Nice</div>
+        <div class="doc">Nice</div>
+    </div>
+
+    <input type="text" class="nam" id="nam" placeholder="Enter your name if you want">
+    <input type="text" class="com" id="com" placeholder="Write a comment">
+
+    <button onclick="docomment()">Comment</button>
+    <button onclick="cancle()">Cancel</button>
+   </div>
+
+    <div class="main" id="main">
+        <div class="top">
+            <img src="image copy.png" alt="img" style="width: 100%; height: 100%;">
+        </div>
+
+        <div class="inp">
+            <input type="file" id="imageInput" accept="image/*" hidden>
+
+            <button class="pimg" id="uploadBtn" onclick="getimg()">
+                + image
+            </button>
+
+            <input type="password" placeholder="Enter pass" id="pass">
+            <button class="ent" onclick="pass()">OK</button>
+        </div>
+
+        <div class="mid">
+            <div class="post" data-imgid="12345">
+                <img src="image.png">
+
+                <div class="buttons">
+                    <button onclick="window.open('https://www.instagram.com/cevora.555?stkn=dzF2c20wOTQyeDgw', '_blank')">❤️ 1M</button>
+                    <button onclick="comment(this)">💬 Comment</button>
+                    <button onclick="deimg(this)" id="del">Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="lodemore()" class="lodemore">Load More</button>
+
+        <div class="lst">
+    <a href="info.html#about">About Us</a>
+    <a href="info.html#contact">Contact Us</a>
+    <a href="info.html#privacy">Privacy Policy</a>
+    <a href="info.html#terms">Terms & Conditions</a>
+</div>
+
+    </div>
+
+    <script src="1st.js"></script>
+</body>
+</html>
