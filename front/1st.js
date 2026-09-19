@@ -19,7 +19,7 @@ function getimg() {
 
         input.value = "";
 
-        fetch("http://localhost:5000/getimg", {
+        fetch("https://ace-random-click.onrender.com/getimg", {
             method: "POST",
             body: poto
         })
@@ -54,7 +54,7 @@ function like(btn) {
 
     let imgId = btn.closest(".post").dataset.imgid;
 
-    fetch("http://localhost:5000/imgl",{
+    fetch("https://ace-random-click.onrender.com/imgl",{
         method: "POST",
 
         headers: {
@@ -103,7 +103,7 @@ function docomment() {
         return;
     }
 
-    fetch("http://localhost:5000/imgc", {
+    fetch("https://ace-random-click.onrender.com/imgc", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -146,7 +146,7 @@ let offset = 0;
 
 function getdata() {
 
-    fetch(`http://localhost:5000/sendimg?offset=${offset}`)
+    fetch(`https://ace-random-click.onrender.com/sendimg?offset=${offset}`)
         .then(res => res.json())
         .then(data => {
 
@@ -203,7 +203,7 @@ function getComments(currentImgId) {
     const commentsContainer = document.querySelector(".allc");
     commentsContainer.innerHTML = "Loading comments...";
 
-    fetch(`http://localhost:5000/getcomments?imgid=${currentImgId}`)
+    fetch(`https://ace-random-click.onrender.com/getcomments?imgid=${currentImgId}`)
         .then(res => res.json())
         .then(data => {
             commentsContainer.innerHTML = "";
@@ -236,7 +236,7 @@ function deimg(btn) {
         return;
     }
 
-    fetch("http://localhost:5000/delete", {
+    fetch("https://ace-random-click.onrender.com/delete", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -262,7 +262,7 @@ function pass() {
         return;
     }
 
-    fetch("http://localhost:5000/pass", {
+    fetch("https://ace-random-click.onrender.com/pass", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

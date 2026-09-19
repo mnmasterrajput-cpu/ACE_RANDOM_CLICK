@@ -1,7 +1,7 @@
 let pass = null;
 
 function getpass() {
-    fetch("http://localhost:5000/newpass")
+    fetch("https://ace-random-click.onrender.com/newpass")
         .then(response => response.json())
         .then(data => {
             pass = data;
