@@ -329,6 +329,9 @@ app.get("/newpass", (req, res) => {
         res.json(result[0].pass_code);
     });
 });
+app.get("/healthz", (req, res) => {
+    res.status(200).send("OK");
+});
 
 const PORT = 5000;
 
