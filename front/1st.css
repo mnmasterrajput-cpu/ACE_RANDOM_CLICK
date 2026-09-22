@@ -292,3 +292,47 @@ body {
     border: none;
     cursor: pointer;
 }
+/* Center Container */
+.x {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* Modern Black Confirm Button */
+.ent-confirm {
+    height: 48px;
+    padding: 0 36px;
+    border: 1px solid #222222;
+    outline: none;
+    
+    /* Sleek Black Theme */
+    background-color: #111111;
+    color: #ffffff;
+    
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 12px;
+    cursor: pointer;
+    
+    /* Soft Dark Shadow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover Effect (Lighter Black + Lift) */
+.ent-confirm:hover {
+    background-color: #222222;
+    border-color: #333333;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
+}
+
+
+.ent-confirm:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}

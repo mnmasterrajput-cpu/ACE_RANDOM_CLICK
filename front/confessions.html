@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Confession Wall</title>
+    <link rel="stylesheet" href="3rd.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Student Confession Wall 🤫</h1>
+            <p>Share your secrets, crushed thoughts, or messages anonymously!</p>
+        </header>
+
+        <!-- Confession Form Section -->
+        <div class="confession-box">
+            <div class="input-group">
+                <input type="text" id="studentName" placeholder="Your Name (Optional / Anonymous)">
+            </div>
+            
+            <div class="input-group">
+                <input type="text" id="targetPerson" placeholder="Confession for whom? (e.g. To Someone Special / CSE Dept)">
+            </div>
+
+            <div class="input-group">
+                <textarea id="confessionText" placeholder="Write your confession here..."></textarea>
+            </div>
+
+            <div class="x">
+                <button class="ent-confirm" onclick="addConfession()">Post Confession</button>
+            </div>
+        </div>
+
+        <!-- Confessions List Area -->
+        <div class="feed-section">
+            <h2>Recent Confessions</h2>
+            <div id="confessionsFeed" class="feed-grid">
+                <!-- Posts dynamic yahan aayenge -->
+            </div>
+        </div>
+    </div>
+
+    <script src="3rd.js"></script>
+</body>
+</html>

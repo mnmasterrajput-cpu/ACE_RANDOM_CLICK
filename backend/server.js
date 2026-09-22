@@ -332,6 +332,99 @@ app.get("/newpass", (req, res) => {
 app.get("/healthz", (req, res) => {
     res.status(200).send("OK");
 });
+// 1. POST A NEW CONFESSION
+app.post("/api/confessions", (req, res) => {
+    const { name, target, text } = req.body;
+    
+    if (!text || !text.trim()) {
+        return res.status(400).json({ success: false, message: "Confession text required hai" });
+    }
+
+    const id = Date.now().toString();
+    const sql = "INSERT INTO confessions (id, name, target, text, likes) VALUES (?, ?, ?, ?, 0)";
+
+    db.query(sql, [id, name || "Anonymous", target || "Someone", text.trim()], (err, result) => {
+        if (err) {
+            console.error("Confession Insert Error:", err);
+            return res.status(500).json({ success: false, message: "Database error" });
+        }
+        res.json({ success: true, message: "Confession successfully posted!" });
+    });
+});
+
+// 2. GET ALL CONFESSIONS WITH COMMENTS
+app.get("/api/confessions", (req, res) => {
+    const sqlConfessions = "SELECT * FROM confessions ORDER BY created_at DESC";
+
+    db.query(sqlConfessions, (err, confessions) => {
+        if (err) {
+            console.error("Fetch Confessions Error:", err);
+            return res.status(500).json({ success: false, message: "Database error" });
+        }
+
+        if (confessions.length === 0) {
+            return res.json([]);
+        }
+
+        const sqlComments = "SELECT * FROM confession_comments ORDER BY created_at ASC";
+
+        db.query(sqlComments, (err, comments) => {
+            if (err) {
+                console.error("Fetch Comments Error:", err);
+                return res.status(500).json({ success: false, message: "Database error" });
+            }
+
+            const result = confessions.map(c => {
+                const postComments = comments.filter(comm => comm.confession_id === c.id);
+                return {
+                    id: c.id,
+                    name: c.name,
+                    target: c.target,
+                    text: c.text,
+                    likes: c.likes,
+                    time: new Date(c.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                    comments: postComments
+                };
+            });
+
+            res.json(result);
+        });
+    });
+});
+
+// 3. LIKE A CONFESSION
+app.put("/api/confessions/:id/like", (req, res) => {
+    const { id } = req.params;
+    const sql = "UPDATE confessions SET likes = likes + 1 WHERE id = ?";
+
+    db.query(sql, [id], (err, result) => {
+        if (err) {
+            console.error("Like Error:", err);
+            return res.status(500).json({ success: false, message: "Database error" });
+        }
+        res.json({ success: true, message: "Like added!" });
+    });
+});
+
+// 4. COMMENT ON A CONFESSION
+app.post("/api/confessions/:id/comment", (req, res) => {
+    const { id } = req.params;
+    const { name, text } = req.body;
+
+    if (!text || !text.trim()) {
+        return res.status(400).json({ success: false, message: "Comment text required hai" });
+    }
+
+    const sql = "INSERT INTO confession_comments (confession_id, name, text) VALUES (?, ?, ?)";
+
+    db.query(sql, [id, name || "Anonymous", text.trim()], (err, result) => {
+        if (err) {
+            console.error("Comment Insert Error:", err);
+            return res.status(500).json({ success: false, message: "Database error" });
+        }
+        res.json({ success: true, message: "Comment added!" });
+    });
+});
 
 const PORT = 5000;
 
